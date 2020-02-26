@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cst_ExistItem" xml:space="preserve">
+    <value>{0} «{1}» قبلا ثبت شده است و تكراري مي باشد.</value>
+  </data>
+  <data name="Sql_18456" xml:space="preserve">
+    <value>ورود كاربر «{0}» به سيستم انجام نشد. نام كاربري يا رمز عبور اشتباه مي باشد و يا كاربر مجوز ورود به سيستم را ندارد.</value>
+    <comment>Login failed for user 'sa'</comment>
+  </data>
+  <data name="Sql_2" xml:space="preserve">
+    <value>امكان برقراري ارتباط با پايگاه داده وجود ندارد. سرويس پايگاه داده متوقف شده است.</value>
+  </data>
+  <data name="Sql_201" xml:space="preserve">
+    <value>رويه ذخيره شده يا تابع «{0}» شامل پارامتر «{1}» مي باشد ولي به آن ارسال نشده است.</value>
+    <comment>Procedure or function 'People_Insert' expects parameter '@Family', which was not supplied.</comment>
+  </data>
+  <data name="Sql_207" xml:space="preserve">
+    <value>ستوني با نام «{0}» وجود ندارد.</value>
+    <comment>Invalid column name 'Id'.</comment>
+  </data>
+  <data name="Sql_208" xml:space="preserve">
+    <value>عنصري در پايگاه داده با نام «{0}» يافت نشد.</value>
+    <comment>Invalid object name 'dbo.PersonInsurance'.</comment>
+  </data>
+  <data name="Sql_2627" xml:space="preserve">
+    <value>مقدار «{0}» تكراري مي باشد.</value>
+    <comment>Violation of PRIMARY KEY constraint 'PK_Proficiency'. Cannot insert duplicate key in object 'Lis.Proficiency'. The duplicate key value is (43). The statement has been terminated.</comment>
+  </data>
+  <data name="Sql_2812" xml:space="preserve">
+    <value>رويه ذخيره شده اي با نام «{0}» وجود ندارد.</value>
+    <comment>Could not find stored procedure 'Kit_IsExistName'.</comment>
+  </data>
+  <data name="Sql_3702" xml:space="preserve">
+    <value>امكان حذف پايگاه داده «{0}» بدليل استفاده در سيستم وجود ندارد.</value>
+    <comment>Cannot drop database "FarasunEmsDb" because it is currently in use.</comment>
+  </data>
+  <data name="Sql_4060" xml:space="preserve">
+    <value>امكان دسترسي به پايگاه داده وجود ندارد.</value>
+    <comment>Cannot open database "FarasunEmsDb" requested by the login. The login failed. Login failed for user 'sa'.</comment>
+  </data>
+  <data name="Sql_4121" xml:space="preserve">
+    <value>ستوني با نام «{0}» يا تابعي با نام «{1}» يافت نشد و يا تداخل نام در پرس و جوي ارسالي وجود دارد.</value>
+    <comment>Cannot find either column "dbo" or the user-defined function or aggregate "dbo.GetContactInfo", or the name is ambiguous.</comment>
+  </data>
+  <data name="Sql_515" xml:space="preserve">
+    <value>امكان درج مقدار NULL براي ستون «{0}» از جدول «{1}» وجود ندارد.</value>
+    <comment>Cannot insert the value NULL into column 'PageNo', table 'FarasunEmsDb.Lis.Proficiency'; column does not allow nulls. INSERT fails. The statement has been terminated.</comment>
+  </data>
+  <data name="Sql_53" xml:space="preserve">
+    <value>امكان برقراري ارتباط با پايگاه داده وجود ندارد. نام يا مسير سرور اشتباه مي باشد.</value>
+    <comment>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</comment>
+  </data>
+  <data name="Sql_547_Delete" xml:space="preserve">
+    <value>امكان حذف اين آيتم به دليل وجود وابستگي در سيستم وجود ندارد.</value>
+    <comment>The DELETE statement conflicted with the REFERENCE constraint "FK_Medic_Proficiency". The conflict occurred in database "FarasunEmsDb", table "People.Medic", column 'ProficiencyId'. The statement has been terminated.</comment>
+  </data>
+  <data name="Sql_547_Insert" xml:space="preserve">
+    <value>امكان درج اين آيتم به دليل وجود تداخل در سيستم وجود ندارد. (كليد خارجي: {0}، جدول: {1}، ستون: {2})</value>
+    <comment>The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Contact.Address_Contact.ContactType_ContactTypeId". The conflict occurred in database "FarasunEmsDb", table "Contact.ContactType", column 'Id'.
+The statement has been terminated.</comment>
+  </data>
+  <data name="Sql_547_Update" xml:space="preserve">
+    <value>امكان ويرايش اين آيتم به دليل وجود وابستگي در سيستم وجود ندارد.</value>
+  </data>
+  <data name="Sql_8114" xml:space="preserve">
+    <value>امكان تبديل نوع داده اي «{0}» به «{1}» وجود ندارد.</value>
+    <comment>Error converting data type int to smallint</comment>
+  </data>
+  <data name="Sql_8144" xml:space="preserve">
+    <value>تعداد پارامترهاي ارسالي به رويه ذخيره شده يا تابع «{0}» بيشتر از تعداد پارامترهاي تعيين شده مي باشد.</value>
+    <comment>Procedure or function KitRange_Insert has too many arguments specified.</comment>
+  </data>
+  <data name="Sql_N1" xml:space="preserve">
+    <value>امكان برقراري ارتباط با پايگاه داده وجود ندارد. نام سرور پايگاه داده يافت نشد.</value>
+  </data>
+  <data name="Win_2" xml:space="preserve">
+    <value>مسير تعيين شده براي فايل در سيستم يافت نشد.</value>
+  </data>
+  <data name="Win_53" xml:space="preserve">
+    <value>مسير تعيين شده براي شبكه يافت نشد.</value>
+    <comment>The network path was not found</comment>
+  </data>
+</root>
