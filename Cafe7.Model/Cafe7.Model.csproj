@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03D9F162-0F35-4109-B91B-CF6763AD1029}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cafe7.Model</RootNamespace>
+    <AssemblyName>Cafe7.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customer\CustomerModel.cs" />
+    <Compile Include="Customer\PointModel.cs" />
+    <Compile Include="Customer\ScoreModel.cs" />
+    <Compile Include="DbCafe7Managment.cs" />
+    <Compile Include="Invoice\InvoiceItemModel.cs" />
+    <Compile Include="Invoice\InvoiceModel.cs" />
+    <Compile Include="Migrations\201807081435314_Initial.cs" />
+    <Compile Include="Migrations\201807081435314_Initial.Designer.cs">
+      <DependentUpon>201807081435314_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807081621358_C001.cs" />
+    <Compile Include="Migrations\201807081621358_C001.Designer.cs">
+      <DependentUpon>201807081621358_C001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807171320448_C002.cs" />
+    <Compile Include="Migrations\201807171320448_C002.Designer.cs">
+      <DependentUpon>201807171320448_C002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807171324251_C003.cs" />
+    <Compile Include="Migrations\201807171324251_C003.Designer.cs">
+      <DependentUpon>201807171324251_C003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807171326499_C004.cs" />
+    <Compile Include="Migrations\201807171326499_C004.Designer.cs">
+      <DependentUpon>201807171326499_C004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807180703591_C005.cs" />
+    <Compile Include="Migrations\201807180703591_C005.Designer.cs">
+      <DependentUpon>201807180703591_C005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807180721132_C006.cs" />
+    <Compile Include="Migrations\201807180721132_C006.Designer.cs">
+      <DependentUpon>201807180721132_C006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807181359158_C007.cs" />
+    <Compile Include="Migrations\201807181359158_C007.Designer.cs">
+      <DependentUpon>201807181359158_C007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808081551373_Publish001.cs" />
+    <Compile Include="Migrations\201808081551373_Publish001.Designer.cs">
+      <DependentUpon>201808081551373_Publish001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="People\PeopleModel.cs" />
+    <Compile Include="Product\ProductModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cafe7.Infrastructure\Cafe7.Infrastructure.csproj">
+      <Project>{ef68d3b1-0145-412b-9070-029b7cedc238}</Project>
+      <Name>Cafe7.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807081435314_Initial.resx">
+      <DependentUpon>201807081435314_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807081621358_C001.resx">
+      <DependentUpon>201807081621358_C001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171320448_C002.resx">
+      <DependentUpon>201807171320448_C002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171324251_C003.resx">
+      <DependentUpon>201807171324251_C003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171326499_C004.resx">
+      <DependentUpon>201807171326499_C004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807180703591_C005.resx">
+      <DependentUpon>201807180703591_C005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807180721132_C006.resx">
+      <DependentUpon>201807180721132_C006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807181359158_C007.resx">
+      <DependentUpon>201807181359158_C007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808081551373_Publish001.resx">
+      <DependentUpon>201808081551373_Publish001.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="queries\publish001.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
