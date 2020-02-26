@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{313EEBA0-E36A-4D59-90F1-CFE5F77F0644}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cafe7.Service</RootNamespace>
+    <AssemblyName>Cafe7.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SmsIrRestful, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SmsIrRestful.1.1.0\lib\net40\SmsIrRestful.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapperConfiguration.cs" />
+    <Compile Include="BackUp\Implementation\BackUpService.cs" />
+    <Compile Include="BackUp\Messaging\Request\BackupRequest.cs" />
+    <Compile Include="BackUp\Messaging\Request\RestoreRequest.cs" />
+    <Compile Include="BackUp\Messaging\Response\BackupResponse.cs" />
+    <Compile Include="BackUp\Messaging\Response\RestoreResponse.cs" />
+    <Compile Include="BackUp\ViewModel\BackupViewModel.cs" />
+    <Compile Include="Class\ProgeressBar.cs" />
+    <Compile Include="CustomerModule\Implementation\CustomerService.cs" />
+    <Compile Include="CustomerModule\Implementation\ScoreService.cs" />
+    <Compile Include="CustomerModule\Mapper\CustomerMapper.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\CustomerBirthdayRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\CustomerDeleteRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\CustomerGetAllRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\CustomerGetByIdRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\CustomerGetByRegistrationNumberRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\CustomerInsertRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\CustomerMaxRegistrationNumberRequeset.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\CustomerSearchRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\CustomerUpdateRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\ScoreRequest\PointInsertRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\ScoreRequest\PointSearchRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\ScoreRequest\ScoreDeleteRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\ScoreRequest\ScoreGetByCustomerIdRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\ScoreRequest\ScoreGetByMaxMinRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Request\ScoreRequest\ScoreUpdateRequest.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\CustomerBirthdayResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\CustomerDeleteResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\CustomerGetAllResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\CustomerGetByIdResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\CustomerGetByRegistartionNumberResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\CustomerInsertResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\CustomerMaxRegistrationNumberResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\CustomerSearchResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\CustomerUpdateResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\ScoreResponse\PointInsertResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\ScoreResponse\PointSearchResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\ScoreResponse\ScoreGetByCustomerIdResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\ScoreResponse\ScoreDeleteResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\ScoreResponse\ScoreGetByMaxMinResponse.cs" />
+    <Compile Include="CustomerModule\Messaging\Response\ScoreResponse\ScoreUpdateResponse.cs" />
+    <Compile Include="CustomerModule\ViewModel\CustomerGetAllScoreViewModel.cs" />
+    <Compile Include="CustomerModule\ViewModel\PointViewModel.cs" />
+    <Compile Include="CustomerModule\ViewModel\CustomerViewModel.cs" />
+    <Compile Include="CustomerModule\ViewModel\ScoreMaxMinViewModel.cs" />
+    <Compile Include="CustomerModule\ViewModel\ScoreViewModel.cs" />
+    <Compile Include="InvoiceItemModule\Implementation\InvoiceItemService.cs" />
+    <Compile Include="InvoiceItemModule\Mapper\InvoiceItemMapper.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Request\InvoiceItemDeleteByCustomerIdRequest.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Request\InvoiceItemDeleteRequest.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Request\InvoiceItemGetByDateRequest.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Request\InvoiceItemGetByInvoiceIdRequest.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Request\InvoiceItemGetByTypeRequest.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Request\InvoiceItemGetForProfileRequest.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Request\InvoiceItemInsertRequest.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Request\InvoiceItemSearchRequest.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Request\InvoiceItemUpdateRequest.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Response\InvoiceItemDeleteByCustomerIdResponse.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Response\InvoiceItemDeleteResponse.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Response\InvoiceItemGetByDateResponse.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Response\InvoiceItemGetByInvoiceIdResponse.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Response\InvoiceItemGetByTypeResponse.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Response\InvoiceItemGetForProfileResponse.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Response\InvoiceItemInsertResponse.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Response\InvoiceItemSearchResponse.cs" />
+    <Compile Include="InvoiceItemModule\Messaging\Response\InvoiceItemUpdateResponse.cs" />
+    <Compile Include="InvoiceItemModule\ViewModel\InvoiceItemForProfileViewModel.cs" />
+    <Compile Include="InvoiceItemModule\ViewModel\InvoiceItemReportViewModel.cs" />
+    <Compile Include="InvoiceItemModule\ViewModel\InvoiceItemUpdateViewModel.cs" />
+    <Compile Include="InvoiceModule\Implementation\InvoiceService.cs" />
+    <Compile Include="InvoiceModule\Mapper\InvoiceMapper.cs" />
+    <Compile Include="InvoiceModule\Messaging\Request\InvoiceDeleteRequest.cs" />
+    <Compile Include="InvoiceModule\Messaging\Request\InvoiceGetByCustomerIdRequest.cs" />
+    <Compile Include="InvoiceModule\Messaging\Request\InvoiceGetByTableNumberRequest.cs" />
+    <Compile Include="InvoiceModule\Messaging\Request\InvoiceInsertRequest.cs" />
+    <Compile Include="InvoiceModule\Messaging\Request\InvoiceSearchRequest.cs" />
+    <Compile Include="InvoiceModule\Messaging\Request\InvoiceUpdateRequest.cs" />
+    <Compile Include="InvoiceModule\Messaging\Response\InvoiceDeleteResponse.cs" />
+    <Compile Include="InvoiceModule\Messaging\Response\InvoiceGetByCustomerIdResponse.cs" />
+    <Compile Include="InvoiceModule\Messaging\Response\InvoiceGetByTableNumberResponse.cs" />
+    <Compile Include="InvoiceModule\Messaging\Response\InvoiceInsertResponse.cs" />
+    <Compile Include="InvoiceModule\Messaging\Response\InvoiceSearchResponse.cs" />
+    <Compile Include="InvoiceModule\Messaging\Response\InvoiceUpdateResponse.cs" />
+    <Compile Include="InvoiceItemModule\ViewModel\InvoiceItemViewModel.cs" />
+    <Compile Include="InvoiceModule\ViewModels\InvoiceViewModel.cs" />
+    <Compile Include="PeopleModule\ViewModel\PeopleViewModel.cs" />
+    <Compile Include="ProductModule\Implementation\ProductService.cs" />
+    <Compile Include="ProductModule\Mapper\ProductMapper.cs" />
+    <Compile Include="ProductModule\Messaging\Request\ProductDeleteRequest.cs" />
+    <Compile Include="ProductModule\Messaging\Request\ProductGetByTypeRequest.cs" />
+    <Compile Include="ProductModule\Messaging\Request\ProductInsertRequest.cs" />
+    <Compile Include="ProductModule\Messaging\Request\ProductSearchRequest.cs" />
+    <Compile Include="ProductModule\Messaging\Request\ProductUpdateRequest.cs" />
+    <Compile Include="ProductModule\Messaging\Response\ProductDeleteResponse.cs" />
+    <Compile Include="ProductModule\Messaging\Response\ProductGetByTypeResponse.cs" />
+    <Compile Include="ProductModule\Messaging\Response\ProductInsertResponse.cs" />
+    <Compile Include="ProductModule\Messaging\Response\ProductSearchResponse.cs" />
+    <Compile Include="ProductModule\Messaging\Response\ProductUpdateResponse.cs" />
+    <Compile Include="ProductModule\ViewModel\ProductViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sms\Sms.cs" />
+    <Compile Include="Sms\SmsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Cafe7.Infrastructure\Cafe7.Infrastructure.csproj">
+      <Project>{ef68d3b1-0145-412b-9070-029b7cedc238}</Project>
+      <Name>Cafe7.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cafe7.Model\Cafe7.Model.csproj">
+      <Project>{03d9f162-0f35-4109-b91b-cf6763ad1029}</Project>
+      <Name>Cafe7.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
