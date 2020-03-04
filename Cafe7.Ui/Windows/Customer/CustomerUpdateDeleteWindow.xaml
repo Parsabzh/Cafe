@@ -1,0 +1,68 @@
+﻿<Window x:Class="Cafe7.Ui.Windows.Customer.CustomerUpdateDeleteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe7.Ui.Windows.Customer"
+        xmlns:persianDateControls="clr-namespace:Arash.PersianDateControls;assembly=PersianDateControls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="حذف و ویرایش مشتریان" Height="370" Width="800" MaxHeight="370" MaxWidth="800" MinHeight="370" MinWidth="80" Background="CadetBlue" WindowStartupLocation="CenterScreen" Icon="../../Item/icons8-technical-support-96.png" >
+    <Grid>
+        <Grid ShowGridLines="False" Name="Grid" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label  Foreground="AliceBlue" Name="LabelName" Grid.Row="1" Grid.Column="2" Content=" نام :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  Foreground="AliceBlue" Name="LabelFamily" Grid.Row="2" Grid.Column="2" Content="نام خانوادگی :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  Foreground="AliceBlue" Name="LabelNationalId" Grid.Row="3" Grid.Column="2" Content="کد ملی :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  Foreground="AliceBlue" Name="LabelMobile" Grid.Row="4" Grid.Column="2" Content="موبایل :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  Foreground="AliceBlue" Name="LabelRegistrationNum" Grid.Row="5" Grid.Column="2" Content="کد اشتراک :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  Foreground="AliceBlue"  Name="LabelAddress" Grid.Row="6" Grid.Column="2" Content="آدرس :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  Foreground="AliceBlue"  Name="LabelBirthday" Grid.Row="7" Grid.Column="2" Content="تاریخ تولد :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <TextBox  Name="TextBoxName" Grid.Row="1" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBox  Name="TextBoxFamily" Grid.Row="2" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBox  Name="TextBoxNationalId" Grid.Row="3" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox  Name="TextBoxMobile" Grid.Row="4" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBox  Name="TextBoxRegistrationNum" Grid.Row="5" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox  Name="TextBoxAddress" Grid.Row="6" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <persianDateControls:PersianDatePicker Name="PersianDatePicker" FlowDirection="LeftToRight" FontFamily="b nazanin" FontSize="18" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="7" Grid.Column="01" Margin="1,0,0,0" VerticalAlignment="Top" Height="35" Width="110" Background="AliceBlue" />
+            <Button Name="ButtonUpdate" Grid.Row="8" Content="ویرایش"   Grid.Column="1" Click="ButtonUpdate_OnClick"  />
+            <Button Name="ButtonDelete" Grid.Row="8" Content="حذف"   Grid.Column="2" Click="ButtonDelete_OnClick"  />
+            <TextBox Name="TextBoxNationalIdSearch" Grid.Row="3" Grid.Column="4" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+            <TextBox Name="TextBoxRegistrationNumSearch" Grid.Row="4" Grid.Column="4" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+            <TextBox Name="TextBoxSearchMobile" Grid.Row="5" Grid.Column="4" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+            <Label Grid.Row="3" Grid.Column="5" VerticalContentAlignment="Center" Content=": کد ملی"  HorizontalContentAlignment="Left" FontWeight="ExtraBold" ></Label>
+            <Label Grid.Row="4" Grid.Column="5" VerticalContentAlignment="Center" Content=": کد عضویت"  HorizontalContentAlignment="Left" FontWeight="ExtraBold" ></Label>
+            <Label Grid.Row="5" Grid.Column="5" VerticalContentAlignment="Center" Content=": موبایل"  HorizontalContentAlignment="Left" FontWeight="ExtraBold" ></Label>
+
+            <Button Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="2" Click="Button_Click">جستجو</Button>
+
+            <materialDesign:Card Grid.Column="4" Grid.ColumnSpan="2"  Grid.Row="1"  Background="{DynamicResource PrimaryHueLightBrush}"
+                                 Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                
+                                 Padding="8" UniformCornerRadius="6"  >
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center">جستجو</TextBlock>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</Window>

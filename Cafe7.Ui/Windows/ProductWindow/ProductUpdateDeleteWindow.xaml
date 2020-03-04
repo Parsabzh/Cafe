@@ -1,0 +1,46 @@
+﻿<Window x:Class="Cafe7.Ui.Windows.ProductWindow.ProductUpdateDeleteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe7.Ui.Windows.ProductWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="ویرایش محصول" Height="304.131" Width="800" Background="DimGray" WindowStartupLocation="CenterScreen" Icon="../../Item/customeredit.png">
+    <Grid ShowGridLines="False" Height="271"  Name="Grid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Foreground="AliceBlue" Name="LabelName" Grid.Row="2" Grid.Column="2" Content="نام محصول :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <Label  Foreground="AliceBlue" Name="LabelPrice" Grid.Row="3" Grid.Column="2" Content="قیمت :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox  Name="TextBoxName" Grid.Row="2" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox  Name="TextBoxPrice" Grid.Row="3" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Button Name="ButtonUpdate" IsEnabled="False" Grid.Row="5" Content="ویرایش"   Grid.Column="1" Click="ButtonUpdate_OnClick"  />
+        <Button Name="ButtonDelete" IsEnabled="False" Grid.Row="5" Content="حذف"   Grid.Column="2" Click="ButtonDelete_OnClick"  />
+        <TextBox Name="TextBoxNameSearch" Grid.Row="3" Grid.Column="4" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <Label Grid.Row="3" Grid.Column="5"  Content="نام محصول : " Foreground="AliceBlue" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="ExtraBold" ></Label>
+        <Button Name="ButtonSearch"  Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" Click="ButtonSearch_OnClick">جستجو</Button>
+        <materialDesign:Card Grid.Column="4" Grid.ColumnSpan="2"  Grid.Row="1"  Background="{DynamicResource PrimaryHueLightBrush}"
+                             Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                
+                             Padding="8" UniformCornerRadius="6"  >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">جستجو</TextBlock>
+        </materialDesign:Card>
+    </Grid>
+</Window>

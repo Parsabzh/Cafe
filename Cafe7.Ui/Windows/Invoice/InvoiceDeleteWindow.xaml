@@ -1,0 +1,135 @@
+﻿<Window x:Class="Cafe7.Ui.Windows.Invoice.InvoiceDeleteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe7.Ui.Windows.Invoice"
+        mc:Ignorable="d"
+        Title="حذف و ویرایش فاکتور"     
+        Height="720" 
+        Width="1280" 
+        Background="CadetBlue" 
+        WindowStartupLocation="CenterScreen" Icon="../../Item/icons8-bill-96(1).png" >
+
+    <Grid ShowGridLines="False" Name="Grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="105*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox Name="TextBoxTableNumberSearch" FontFamily="b nazanin" FontSize="20"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="7" Grid.Row="2" />
+        <Label Name="LabelTableNumberSearch" Grid.Row="2" Grid.Column="8"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="16"  FontFamily="Samim" >شماره میز :</Label>
+        <Label Name="LabelCustomerNum" Grid.Row="2" Grid.Column="12"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="16"  FontFamily="Samim" >کد اشتراک :</Label>
+        <TextBox Name="TextBoxCustomerNum" FontFamily="b nazanin" FontSize="20"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="11" Grid.Row="2" />
+        <Button Name="ButtonTableNumberSearch" Grid.Column="3"  Grid.Row="2" Grid.ColumnSpan="3" Content="جستجو فاکتور " FontFamily="Samim" Click="ButtonTableNumberSearch_Click" />
+        <Button Name="ButtonDelete" IsEnabled="False" Grid.Column="3"  Grid.Row="20" Grid.ColumnSpan="4" Content="حذف فاکتور " FontFamily="Samim" FontWeight="Bold" FontSize="18" Click="ButtonDelete_OnClick" Margin="30,0,78,0"  />
+
+
+        <ComboBox Name="ComboBoxCoffe" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="2" Foreground="AliceBlue" ></ComboBox>
+        <ComboBox  Name="ComboBoxCake" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Row="6" Grid.Column="11" Grid.ColumnSpan="2" Foreground="AliceBlue"></ComboBox>
+        <ComboBox Name="ComboBoxHotDrink" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Row="8" Grid.Column="11" Grid.ColumnSpan="2" Foreground="AliceBlue"></ComboBox>
+        <ComboBox Name="ComboBoxColdDrink" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Row="10" Grid.Column="11" Grid.ColumnSpan="2" Foreground="AliceBlue"></ComboBox>
+        <ComboBox Name="ComboBoxIce" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Row="12" Grid.Column="11" Grid.ColumnSpan="2" Foreground="AliceBlue"></ComboBox>
+        <ComboBox Name="ComboBoxCoctel" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Row="14" Grid.Column="11" Grid.ColumnSpan="2" Foreground="AliceBlue"></ComboBox>
+        <ComboBox Name="ComboBoxSmooti" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="AliceBlue"  Grid.Row="16" Grid.Column="11" Grid.ColumnSpan="2" ></ComboBox>
+        <ComboBox Name="ComboBoxHearbalTea" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="AliceBlue"  Grid.Row="18" Grid.Column="11" Grid.ColumnSpan="2"></ComboBox>
+        <ComboBox Name="ComboBoxHerbalTeaSpecial" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="AliceBlue"  Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="2"></ComboBox>
+        <ComboBox Name="ComboBoxShake" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="AliceBlue"  Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="2"></ComboBox>
+        <ComboBox Name="ComboBoxGlasse" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="AliceBlue"  Grid.Row="8" Grid.Column="6" Grid.ColumnSpan="2"></ComboBox>
+        <ComboBox Name="ComboBoxFarapeh" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="AliceBlue"  Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="2"></ComboBox>
+        <ComboBox Name="ComboBoxBreakFast" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="AliceBlue"  Grid.Row="12" Grid.Column="6" Grid.ColumnSpan="2"></ComboBox>
+        <ComboBox Name="ComboBoxFood" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="AliceBlue"  Grid.Row="14" Grid.Column="6" Grid.ColumnSpan="2"></ComboBox>
+        <TextBox Name="TextBoxCoffeeNum" Grid.Row="4" Grid.Column="9" TextAlignment="Center" FontFamily="b nazanin" FontSize="20"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+        <TextBox Name="TextBoxCake" Grid.Row="6" Grid.Column="9" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <TextBox Name="TextBoxHotDrink" Grid.Row="8" Grid.Column="9" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+        <TextBox Name="TextBoxColdDrink" Grid.Row="10" Grid.Column="9" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <TextBox  Name="TextBoxIce" Grid.Row="12" Grid.Column="9" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <TextBox Name="TextBoxCoctel" Grid.Row="14" Grid.Column="9" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <TextBox Name="TextBoxSmooti" Grid.Row="16" Grid.Column="9" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+        <TextBox Name="TextBoxHearbalTea" Grid.Row="18" Grid.Column="9" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <TextBox Name="TextBoxHerabalTeaSpecial" Grid.Row="4" Grid.Column="4" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  ></TextBox>
+        <TextBox Name="TextBoxShake" Grid.Row="6" Grid.Column="4" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+        <TextBox Name="TextBoxGlasse" Grid.Row="8" Grid.Column="4" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <TextBox Name="TextBoxFarapeh" Grid.Row="10" Grid.Column="4" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <TextBox Name="TextBoxBreakFast" Grid.Row="12" Grid.Column="4" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <TextBox Name="TextBoxFood" Grid.Row="14" Grid.Column="4" TextAlignment="Center" FontFamily="b nazanin" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+        <Label Name="LabelNameCoffee" Grid.Row="4" Grid.Column="13"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" Margin="0,0,0,22" Grid.RowSpan="2" >قهوه :</Label>
+        <Label Name="LabelNameCake" Grid.Row="6" Grid.Column="13"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" >کیک :</Label>
+        <Label Name="LabelNameHotDrink" Grid.Row="8" Grid.Column="13"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="16" FontFamily="Samim" Margin="8,0,0,21" Grid.RowSpan="2" >نوشیدنی گرم :</Label>
+        <Label Name="LabelNameColdDrink" Grid.Row="10" Grid.Column="13"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="16" FontFamily="Samim" Margin="0,0,0,22" Grid.RowSpan="2" >نوشیدنی سرد :</Label>
+        <Label Name="LabelNameIce" Grid.Row="12" Grid.Column="13"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" Margin="0,0,0,22" Grid.RowSpan="2" >آیس :</Label>
+        <Label Name="LabelNameCoctel" Grid.Row="14" Grid.Column="13"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" Margin="0,0,0,21" Grid.RowSpan="2" >کوکتل :</Label>
+        <Label Name="LabelNameSmooti" Grid.Row="16" Grid.Column="13"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" Margin="0,0,0,21" Grid.RowSpan="2" >اسموتی :</Label>
+        <Label Name="LabelNameHerabalTea" Grid.Row="18" Grid.Column="13"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" Margin="0,0,0,21" Grid.RowSpan="2" >دمنوش :</Label>
+        <Label Name="LabelNameHerabalTeaSpecial" Grid.Row="4" Grid.Column="8"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="16" FontFamily="Samim" Margin="0,0,0,22" Grid.RowSpan="2" >دمنوش ویژه :</Label>
+        <Label Name="LabelNameShake" Grid.Row="6" Grid.Column="8"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" >شیک :</Label>
+        <Label Name="LabelNameGlasse" Grid.Row="8" Grid.Column="8"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" >گلاسه :</Label>
+        <Label Name="LabelNameFarapeh" Grid.Row="10" Grid.Column="8"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" Margin="0,0,0,22" Grid.RowSpan="2" >فراپه :</Label>
+        <Label Name="LabelNameBreakFast" Grid.Row="12" Grid.Column="8"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" >صبحانه :</Label>
+        <Label Name="LabelNameFood" Grid.Row="14" Grid.Column="8"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" >غذا :</Label>
+
+        <Label Name="LabelNameOff" FontSize="18" Grid.Column="7" Grid.Row="16" FontFamily="Samim" Foreground="AliceBlue" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FlowDirection="RightToLeft">تخفیف :</Label>
+        <TextBox  Name="TextBoxOff" Grid.Row="16" Grid.Column="4" Grid.ColumnSpan="3" FlowDirection="RightToLeft" TextAlignment="Center"></TextBox>
+        <Button Name="ButtonAddToInvoice" Grid.Row="18"  FontFamily="Samim" FontSize="18" FontWeight="Bold" Grid.Column="4" Grid.ColumnSpan="4" IsEnabled="False" Click="ButtonAddToInvoice_Click">اضافه به فاکتور</Button>
+        <DataGrid Name="GridInvoiceItem" CanUserAddRows="False" Grid.Row="4" Grid.ColumnSpan="4" Grid.Column="0" Grid.RowSpan="13" Margin="35,0" FlowDirection="RightToLeft" FontFamily="samim" FontSize="18" GridLinesVisibility="All" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="محصول" Binding="{Binding PName}" FontFamily="Samim" Width="120*" FontSize="14"></DataGridTextColumn>
+                <DataGridTextColumn Header="قیمت" Binding="{Binding Price}" FontFamily="Samim" Width="120*" FontSize="12" ></DataGridTextColumn>
+                <DataGridTextColumn Header="تعداد" Binding="{Binding Qty}" FontFamily="Samim" Width="65*" FontSize="14"></DataGridTextColumn>
+                <DataGridTextColumn Header="کد اشتراک" Binding="{Binding Registration}" FontFamily="Samim" Width="120*" FontSize="14"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="ButtonDataGridItemDelete" Content="حذف" Click="ButtonDataGridItemDelete_OnClick" ></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Name="LabelNameTotal" Grid.Row="18" Grid.Column="2"  Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="16" FontFamily="Samim" >قیمت نهایی :</Label>
+        <Label Name="LabelTotal" Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="2"   Foreground="AliceBlue" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FlowDirection="RightToLeft" FontSize="18" FontFamily="Samim" Margin="35,0,0,0" ></Label>
+        <Button Name="ButtonUpdate" Grid.Row="20" Grid.ColumnSpan="3" Grid.Column="0" FontFamily="Samim" FontSize="18" FontWeight="Bold" Margin="35,0,0,0" Click="ButtonUpdate_OnClick" IsEnabled="False">ویرایش فاکتور</Button>
+
+
+    </Grid>
+
+
+
+
+
+</Window>

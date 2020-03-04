@@ -1,0 +1,53 @@
+﻿<Window x:Class="Cafe7.Ui.Windows.ProductWindow.ProductInsertWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe7.Ui.Windows.ProductWindow"
+        mc:Ignorable="d"
+        Title="وارد کردن محصول" WindowStartupLocation="CenterScreen"   MinHeight="450" MinWidth="496.822" Height="409.958" Width="496.822" Background="#FF268080" Icon="../../Item/icons8-product-96.png" KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid Name="Grid" ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label  Foreground="AliceBlue" Name="LabelName" Grid.Row="2" Grid.Column="2" Content="نام محصول" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <Label  Foreground="AliceBlue" Name="LabelPrice" Grid.Row="3" Grid.Column="2" Content="قیمت" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBox  Name="TextBoxName" Grid.Row="2" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBox  Name="TextBoxPrice" Grid.Row="3" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <RadioButton Name="RadioButtonHearbalTeaSpecial" Grid.Row="5" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" >دمنوش ویژه</RadioButton>
+            <RadioButton Name="RadioButtonShake" Grid.Row="6" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" >شیک</RadioButton>
+            <RadioButton Name="RadioButtonGlasse" Grid.Row="7" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">گلاسه</RadioButton>
+            <RadioButton Name="RadioButtonFarapeh" Grid.Row="8" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">فراپه</RadioButton>
+            <RadioButton Name="RadioButtonIce" Grid.Row="5" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">آیس</RadioButton>
+            <RadioButton Name="RadioButtonCoctel" Grid.Row="6" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">کوکتل</RadioButton>
+            <RadioButton Name="RadioButtonSmooti" Grid.Row="7" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">اسموتی</RadioButton>
+            <RadioButton Name="RadioButtonHeralTea" Grid.Row="8" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">دمنوش</RadioButton>
+            <RadioButton Name="RadioButtonCoffee" Grid.Row="5" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">قهوه</RadioButton>
+            <RadioButton Name="RadioButtonCake" Grid.Row="6" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" >کیک</RadioButton>
+            <RadioButton Name="RadioButtonHotDrink" Grid.Row="7" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">نوشیدنی گرم</RadioButton>
+            <RadioButton Name="RadioButtonColdDrink" Grid.Row="8" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">نوشیدنی سرد</RadioButton>
+            <RadioButton Name="RadioButtonBreakFast" Grid.Row="5" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">صبحانه</RadioButton>
+            <RadioButton Name="RadioButtonFood" Grid.Row="6" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">غذاها</RadioButton>
+            <Button Name="ButtonInsert" Grid.Row="10" Content="ثبت"  Grid.ColumnSpan="2" Grid.Column="1" Click="ButtonInsert_OnClick"  />
+        </Grid>
+    </Grid>
+</Window>

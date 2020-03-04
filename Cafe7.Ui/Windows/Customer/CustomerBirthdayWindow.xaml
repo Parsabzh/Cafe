@@ -1,0 +1,98 @@
+﻿<Window x:Class="Cafe7.Ui.Windows.Customer.CustomerBirthdayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe7.Ui.Windows.Customer"    
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="مناسبت"   
+        Height="720" 
+        Width="1280" Background="Teal" WindowStartupLocation="CenterScreen"  Icon="../../Item/icons8-birthday-512.png" >
+    <Grid>
+        <Grid ShowGridLines="False" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="105*" />
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+
+            </Grid.RowDefinitions>
+            <DataGrid Name="GridCustomer" CanUserAddRows="False" Grid.Row="1" Foreground="AliceBlue"   Grid.ColumnSpan="6" Grid.RowSpan="18"  FlowDirection="RightToLeft" FontFamily="samim" FontSize="18" GridLinesVisibility="All" AutoGenerateColumns="False" Margin="30,0,0,0" >
+                <DataGrid.Background>
+                    <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
+                </DataGrid.Background>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="نام" Width="1*"    Binding="{Binding Name}" FontFamily="Samim" Foreground="White"></DataGridTextColumn>
+                    <DataGridTextColumn Header="نام خانوادگی" Width="1*" Binding="{Binding Family}" FontFamily="Samim" Foreground="AliceBlue"></DataGridTextColumn>
+                    <DataGridTextColumn Header="کد اشتراک" Width="1*" Binding="{Binding RegistrationNumber}" FontFamily="Samim" Foreground="AliceBlue"></DataGridTextColumn>
+                    <DataGridTextColumn Header="موبایل" Width="1*" Binding="{Binding Mobile}" FontFamily="Samim" Foreground="AliceBlue"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <materialDesign:Card Grid.Column="8" Grid.ColumnSpan="2"  Grid.Row="1"
+                                 Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                
+                                 Padding="8" UniformCornerRadius="15" Background="#FF1C6BC9" >
+                <TextBlock Name="TextBlockDate" TextWrapping="Wrap" FontFamily="b nazanin" FontSize="20" FontStretch="Expanded" TextAlignment="Center"></TextBlock>
+            </materialDesign:Card>
+            <materialDesign:Card Grid.Column="8" Grid.ColumnSpan="2"  Grid.Row="3"  Background="{DynamicResource PrimaryHueLightBrush}"
+                                 Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                
+                                 Padding="8" UniformCornerRadius="6" >
+                <TextBlock  TextWrapping="Wrap" FontFamily="b nazanin" FontSize="16" FontWeight="ExtraBold" TextAlignment="Center">جستجو براساس تاریخ تولد</TextBlock>
+            </materialDesign:Card>
+            <materialDesign:Card Grid.Column="8" Grid.ColumnSpan="2"  Grid.Row="9"  Background="{DynamicResource PrimaryHueLightBrush}"
+                                 Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                
+                                 Padding="8" UniformCornerRadius="6" >
+                <TextBlock  TextWrapping="Wrap" FontFamily="b nazanin" FontSize="16" FontWeight="ExtraBold" TextAlignment="Center">جستجو براساس امتیاز</TextBlock>
+            </materialDesign:Card>
+            <TextBox Name="TextBoxMinScore" IsEnabled="true" FontFamily="b nazanin" FontSize="18" Grid.Row="11" Grid.Column="8"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label Grid.Row="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="9" FontFamily="Samim" FontSize="18" FlowDirection="RightToLeft" >بالاتر از امتیاز :</Label>
+            <TextBox Name="TextBoxMaxScore" IsEnabled="true" FontFamily="b nazanin" FontSize="18" Grid.Row="12" Grid.Column="8"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label Grid.Row="11" Grid.Column="9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Samim" FontSize="16" FlowDirection="RightToLeft" >پایین تر از امتیاز :</Label>
+            <Label Grid.Row="16" Grid.Column="9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Samim" FontSize="16" FlowDirection="RightToLeft" >نوع پیام :</Label>
+            <ComboBox Name="ComboBoxHotSmsType" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Row="16" Grid.Column="8"  Foreground="AliceBlue" >
+                <ComboBoxItem Content="اعیاد" FontFamily="Samim"/>
+                <ComboBoxItem Content="روزهای خاص" FontFamily="Samim"/>
+            </ComboBox>
+
+            <Button Name="ButtonCustomerSearchBirthday" Grid.Column="8" FontFamily="Samim" FontSize="18"   Grid.Row="5"  Click="ButtonCustomerSearchBirthday_Click"    Grid.ColumnSpan="2"  >جستجو</Button>
+            <Button Name="ButtonCustomerSearchScore" Grid.Column="8" FontFamily="Samim" FontSize="18"   Grid.Row="14"  Click="ButtonCustomerSearchScore_OnClick"    Grid.ColumnSpan="2"   >جستجو</Button>
+            <Button Name="ButtonSendSms" IsEnabled="False" Grid.Row="7" Grid.Column="7" FontFamily="Samim" FontSize="18"   Click="ButtonSendSms_Click" Margin="2,1,8,4"    >ارسال پیام</Button>
+            <TextBox Name="TextBoxOff" IsEnabled="True" FontFamily="b nazanin" FontSize="18" Grid.Row="7" materialDesign:HintAssist.Hint="میزان تخفیف را وارد نمایید" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="8" Grid.ColumnSpan="2" />
+            <Button Name="ButtonSendSmsEvent" IsEnabled="False" Grid.Row="18" Grid.Column="7" FontFamily="Samim" FontSize="18"   Click="ButtonSendSmsEvent_OnClick" Margin="2,0,8,4"    Content="ارسال پیام"    />
+            <TextBox Name="TextBoxOffEvent" IsEnabled="True" FontFamily="b nazanin" FontSize="18" Grid.Row="18" materialDesign:HintAssist.Hint="میزان تخفیف را وارد نمایید" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="8" Grid.ColumnSpan="2"   />
+        </Grid>
+    </Grid>
+</Window>

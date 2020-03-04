@@ -1,0 +1,85 @@
+﻿<Window x:Class="Cafe7.Ui.Windows.Customer.CustomerScoreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe7.Ui.Windows.Customer"
+        xmlns:m="clr-namespace:MaterialDesignColors;assembly=MaterialDesignColors"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="امتیازات" Height="500" Width="800" Background="DarkSlateGray" WindowStartupLocation="CenterScreen" Icon="../../Item/icons8-anmeld-512.png">
+    <Grid>
+        <Grid ShowGridLines="False" Name="Grid" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <!--<RowDefinition Height="313*"></RowDefinition>-->
+            </Grid.RowDefinitions>
+
+            <Label  VerticalContentAlignment="Center"  Foreground="AliceBlue" Name="LabelName" Grid.Row="2" Grid.Column="2" Content="نام :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  VerticalContentAlignment="Center" Foreground="AliceBlue" Name="LabelFamily" Grid.Row="3" Grid.Column="2" Content="نام خانوادگی :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  VerticalContentAlignment="Center" Foreground="AliceBlue" Name="LabelMobile" Grid.Row="4" Grid.Column="2" Content="موبایل :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  VerticalContentAlignment="Center" Foreground="AliceBlue" Name="LabelRegistrationNum" Grid.Row="5" Grid.Column="2" Content="کد اشتراک :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  VerticalContentAlignment="Center" Foreground="AliceBlue" Name="LabelInvoice" Grid.Row="6" Grid.Column="2" Content="جمع فاکتور :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  VerticalContentAlignment="Center" Foreground="AliceBlue" Name="LabelPercent" Grid.Row="7" Grid.Column="2" Content="درصد محاسبه :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  VerticalContentAlignment="Center" Foreground="AliceBlue" Name="LabelScore" Grid.Row="8" Grid.Column="2" Content="امتیاز :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  VerticalContentAlignment="Center" Foreground="AliceBlue" Name="LabelScoreDecrease" Grid.Row="9" Grid.Column="2" Content="میزان کسر امتیاز :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  VerticalContentAlignment="Center" Foreground="AliceBlue" Name="LabelTotalScore" Grid.Row="1" Grid.Column="2" Content="امتیاز کل :" FlowDirection="RightToLeft" FontWeight="Bold" HorizontalContentAlignment="Right"  />
+            <Label  VerticalContentAlignment="Center" Foreground="AliceBlue" Name="LabelTotalScoreShow"  Grid.Row="1" Grid.Column="1" FontFamily="Samim" FlowDirection="RightToLeft"  HorizontalContentAlignment="Center"  />
+            <TextBox Foreground="AliceBlue" IsEnabled="False"  Name="TextBoxName" Grid.Row="2" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" />
+            <TextBox Foreground="AliceBlue" IsEnabled="False" Name="TextBoxFamily" Grid.Row="3" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" />
+            <TextBox Foreground="AliceBlue" IsEnabled="False" Name="TextBoxMobile" Grid.Row="4" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBox Foreground="AliceBlue" IsEnabled="False" Name="TextBoxRegistrationNum" Grid.Row="5" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Foreground="AliceBlue" IsEnabled="True" Name="TextBoxInvoice" Grid.Row="6" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="TextBoxInvoice_OnTextChanged"/>
+            <TextBox Foreground="AliceBlue" IsEnabled="True" Name="TextBoxPercent" Grid.Row="7" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="TextBoxPercent_OnTextChanged" />
+            <TextBox Foreground="AliceBlue"  Name="TextBoxScore" Grid.Row="8" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  />
+            <TextBox Foreground="AliceBlue"  Name="TextBoxScoreDecrease" Grid.Row="9" Grid.Column="1" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  />
+            <Button Name="ButtonUpdateScore" IsEnabled="False" Background="DodgerBlue" Grid.Row="11" Content="اضافه کردن امتیاز" FontSize="10" FontWeight="Bold"  Grid.Column="1" Click="ButtonUpdateScore_OnClick" Margin="0,0,5,4"  />
+            <Button Name="ButtonDeleteScore" IsEnabled="False" Grid.Row="11" Background="DodgerBlue" Content="کسر امتیاز"   Grid.Column="2" Click="ButtonDeleteScore_OnClick" Margin="5,0,0,4"  />
+            <materialDesign:Card Grid.Column="4"  Grid.Row="1"  Grid.ColumnSpan="2" Background="{DynamicResource PrimaryHueDarkBrush}"
+                                 Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                
+                                 Padding="8" UniformCornerRadius="6">
+                <TextBlock TextWrapping="Wrap" FontSize="14" TextAlignment="Center">جستجو</TextBlock>
+            </materialDesign:Card>
+            <TextBox Foreground="AliceBlue" Name="TextBoxNationalIdSearch" Grid.Row="3" Grid.Column="4" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+            <TextBox Foreground="AliceBlue" Name="TextBoxRegistrationNumSearch" Grid.Row="5" Grid.Column="4" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+            <TextBox Foreground="AliceBlue" Name="TextBoxSearchMobile" Grid.Row="7" Grid.Column="4" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+            <Label Grid.Row="3" Grid.Column="5" Content="کد ملی :"  HorizontalContentAlignment="Right" FlowDirection="RightToLeft"  VerticalContentAlignment="Center" FontWeight="ExtraBold" Foreground="AliceBlue" ></Label>
+            <Label Grid.Row="5" Grid.Column="5" Content="کد اشتراک :"  HorizontalContentAlignment="Right" FlowDirection="RightToLeft" VerticalContentAlignment="Center"  FontWeight="ExtraBold" Foreground="AliceBlue"></Label>
+            <Label Grid.Row="7" Grid.Column="5" Content="موبایل :"  HorizontalContentAlignment="Right" FlowDirection="RightToLeft" VerticalContentAlignment="Center" FontWeight="ExtraBold" Foreground="AliceBlue"></Label>
+
+            <Button Name="ButtonSearch" Background="DodgerBlue" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="2" Click="ButtonSearch_OnClick" Margin="0,0,0,4" >جستجو</Button>
+        </Grid>
+        <Separator HorizontalAlignment="Left" Height="100" Margin="212,147,0,0" VerticalAlignment="Top" Width="354" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+    </Grid>
+</Window>

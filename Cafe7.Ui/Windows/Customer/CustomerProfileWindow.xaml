@@ -1,0 +1,83 @@
+﻿<Window x:Class="Cafe7.Ui.Windows.Customer.CustomerProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe7.Ui.Windows.Customer"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"    
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="مناسبت"   
+        Height="720" 
+        Width="1024" Background="#FF114D4D" WindowStartupLocation="CenterScreen"  Icon="../../Item/icons8-birthday-512.png">
+    <Grid>
+        <Grid ShowGridLines="False" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="105*" />
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="105*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+
+            </Grid.RowDefinitions>
+            <DataGrid Name="GridCustomer" CanUserAddRows="False" Grid.Row="1" Foreground="AliceBlue"   Grid.ColumnSpan="4" Grid.RowSpan="18"  FlowDirection="RightToLeft" FontFamily="samim" FontSize="18" GridLinesVisibility="All" AutoGenerateColumns="False" Margin="30,0,0,0" >
+                <DataGrid.Background>
+                    <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
+                </DataGrid.Background>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="نام کالا" Width="140*"  FontSize="14"  Binding="{Binding ProductName}" FontFamily="Samim" Foreground="White"></DataGridTextColumn>
+                    <DataGridTextColumn Header="تعداد" Width="105*" FontSize="14" Binding="{Binding Qty}" FontFamily="Samim" Foreground="AliceBlue"></DataGridTextColumn>
+                    <DataGridTextColumn Header="تاریخ" Width="105*" FontSize="14" Binding="{Binding Date}" FontFamily="Samim" Foreground="AliceBlue"></DataGridTextColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <materialDesign:Card Grid.Column="7" Grid.ColumnSpan="4"  Grid.Row="1"  Background="#FF004C8B"
+                                 Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                
+                                 Padding="8" UniformCornerRadius="6" Height="46" Grid.RowSpan="2" Margin="19,0,24,0" >
+                <TextBlock  TextWrapping="Wrap" FontFamily="Samim" FontSize="16" FontWeight="bold" TextAlignment="Center">جستجو کاربر</TextBlock>
+            </materialDesign:Card>
+            <Label Name="LabelRegistrationNumber" Grid.Column="9" Grid.Row="3" FlowDirection="RightToLeft" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Samim" Foreground="AliceBlue" >کد اشتراک :</Label>
+            <TextBox Name="TextBoxRegistartionNumber" Grid.Column="8"  Grid.Row="3" FontFamily="b nazanin" FontSize="16" Foreground="AliceBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></TextBox>
+            <Button Name="ButtonSearchCustomer" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="5" FontFamily="Samim" FontWeight="Bold" Background="DodgerBlue" Foreground="WhiteSmoke" BorderBrush="#FF51318B" Click="ButtonSearchCustomer_Click"  >جستجو</Button>
+            <Label Name="Label" Content="مشخصات کاربر :" Grid.Column="9" Grid.ColumnSpan="2"  Grid.Row="7" FlowDirection="RightToLeft" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16" FontFamily="Samim" Foreground="AliceBlue" Margin="9,0,-9,0"   ></Label>
+            <Label Name="LabelName" Grid.Column="8" Grid.Row="7" FlowDirection="RightToLeft" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Samim" Foreground="AliceBlue" Margin="0,0,1,0"   />
+            <Label Name="LabelFamily" Grid.Column="7" Grid.Row="7" FlowDirection="RightToLeft" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="16" FontFamily="Samim" Foreground="AliceBlue" Grid.ColumnSpan="2" Margin="1,0,91,0" ></Label>
+            <Label Name="LabelScoreName" Grid.Column="9" Grid.Row="9" FlowDirection="RightToLeft" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Samim" Foreground="AliceBlue" >امتیاز کل :</Label>
+            <Label Name="LabelScore" Grid.Column="8" Grid.Row="9" FlowDirection="RightToLeft" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Samim" Foreground="AliceBlue" ></Label>
+            <Label Name="LabelLoyality" Grid.Column="9" Grid.Row="11" FlowDirection="RightToLeft" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14" FontFamily="Samim" Foreground="AliceBlue" Grid.ColumnSpan="2" Margin="6,0,87,0"  >درصد وفاداری :</Label>
+            <ProgressBar Name="ProgressBar"  Value="0" Grid.Column="5" Margin="0,4,0,6" Grid.Row="11" Height="Auto" Grid.ColumnSpan="4" FlowDirection="RightToLeft" Background="White" Foreground="#FF2D3EA8"></ProgressBar>
+
+        </Grid>
+    </Grid>
+
+</Window>
