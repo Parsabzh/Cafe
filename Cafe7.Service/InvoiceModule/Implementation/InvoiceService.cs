@@ -145,7 +145,7 @@ namespace Cafe7.Service.InvoiceModule.Implementation
             {
                 _db=new DbCafe7Managment();
                 var model = _db.Invoices.Find(request.Entity.Id);
-                AutoMapper.Mapper.Map(request.Entity,model);
+                request.Entity.CopyTo(model);
                 _db.SaveChanges();
                 return new InvoiceUpdateResponse
                 {

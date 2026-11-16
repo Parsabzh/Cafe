@@ -30,7 +30,6 @@ namespace Cafe7.Ui
             };
             Thread.CurrentThread.CurrentCulture = culture;
             Thread.CurrentThread.CurrentUICulture = culture;
-            AutoMapperConfiguration.Configure();
             var db = new DbCafe7Managment();
             db.Customers.Find(0);
         }

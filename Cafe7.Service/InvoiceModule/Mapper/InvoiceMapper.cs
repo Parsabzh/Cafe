@@ -1,48 +1,54 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Cafe7.Model.Invoice;
 using Cafe7.Service.InvoiceModule.ViewModels;
 
 namespace Cafe7.Service.InvoiceModule.Mapper
 {
-   public static class InvoiceMapper
+    public static class InvoiceMapper
     {
-        //public static InvoiceItemModel ToModel(this InvoiceItemViewModel entity)
-        //{
-        //    return AutoMapper.Mapper.Map<InvoiceItemViewModel, InvoiceItemModel>(entity);
-        //}
-
-        //public static InvoiceItemViewModel ToViewModel(this InvoiceItemModel entity)
-        //{
-        //    return AutoMapper.Mapper.Map<InvoiceItemModel, InvoiceItemViewModel>(entity);
-        //}
-
         public static InvoiceViewModel ToViewModel(this InvoiceModel entity)
         {
-          return  AutoMapper.Mapper.Map<InvoiceModel, InvoiceViewModel>(entity);
+            if (entity == null)
+                return null;
+
+            return new InvoiceViewModel
+            {
+                Id = entity.Id,
+                Date = entity.Date,
+                TableNumber = entity.TableNumber,
+                Total = entity.Total,
+                InvoiceNumber = entity.InvoiceNumber
+            };
         }
+
         public static InvoiceModel ToModel(this InvoiceViewModel entity)
         {
-            return AutoMapper.Mapper.Map<InvoiceViewModel, InvoiceModel>(entity);
+            if (entity == null)
+                return null;
+
+            var model = new InvoiceModel();
+            entity.CopyTo(model);
+            return model;
+        }
+
+        public static void CopyTo(this InvoiceViewModel source, InvoiceModel target)
+        {
+            target.Id = source.Id;
+            target.Date = source.Date;
+            target.TableNumber = source.TableNumber;
+            target.Total = source.Total;
+            target.InvoiceNumber = source.InvoiceNumber;
         }
 
         public static IEnumerable<InvoiceViewModel> ToViewModel(this IEnumerable<InvoiceModel> entity)
         {
-            return AutoMapper.Mapper.Map<IEnumerable<InvoiceModel>, IEnumerable<InvoiceViewModel>>(entity);
+            return entity?.Select(item => item.ToViewModel()).ToList() ?? new List<InvoiceViewModel>();
         }
+
         public static IEnumerable<InvoiceModel> ToModel(this IEnumerable<InvoiceViewModel> entity)
         {
-            return AutoMapper.Mapper.Map<IEnumerable<InvoiceViewModel>, IEnumerable<InvoiceModel>>(entity);
+            return entity?.Select(item => item.ToModel()).ToList() ?? new List<InvoiceModel>();
         }
-
-        //public static IEnumerable<InvoiceItemViewModel> ToViewModel(this IEnumerable<InvoiceItemModel> entity)
-        //{
-        //    return AutoMapper.Mapper.Map<IEnumerable<InvoiceItemModel>, IEnumerable<InvoiceItemViewModel>>(entity);
-        //}
-
-        //public static IEnumerable<InvoiceItemModel> ToModel(this IEnumerable<InvoiceItemViewModel> entity)
-        //{
-        //    return AutoMapper.Mapper.Map<IEnumerable<InvoiceItemViewModel>, IEnumerable<InvoiceItemModel>>(entity);
-        //}
-
     }
 }
