@@ -197,7 +197,7 @@ namespace Cafe7.Service.CustomerModule.Implementation
                 }
 
 
-                AutoMapper.Mapper.Map(request.Entity, entity);
+                request.Entity.CopyTo(entity);
                 _db.SaveChanges();
                 return new CustomerUpdateResponse
                 {

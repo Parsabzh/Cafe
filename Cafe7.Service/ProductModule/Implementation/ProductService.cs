@@ -110,7 +110,7 @@ namespace Cafe7.Service.ProductModule.Implementation
                     };
                 if (entity.Name == request.Entity.Name)
                 {
-                    AutoMapper.Mapper.Map(request.Entity, entity);
+                    request.Entity.CopyTo(entity);
                     _db.SaveChanges();
                     return new ProductUpdateResponse
                     {
@@ -133,7 +133,7 @@ namespace Cafe7.Service.ProductModule.Implementation
                     }
                 }
 
-                AutoMapper.Mapper.Map(request.Entity, entity);
+                request.Entity.CopyTo(entity);
                 _db.SaveChanges();
                 return new ProductUpdateResponse
                 {
